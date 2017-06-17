@@ -10,7 +10,7 @@ docker build -t siesta .
 Run container
 
 ```bash
-docker run -it suesta bash
+docker run -it siesta bash
 ```
 
 this will get you inside the docker container with a precompiled siesta installed in `/opt/siesta-4.1-b2/`
