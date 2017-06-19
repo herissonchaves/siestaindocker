@@ -18,4 +18,10 @@ this will get you inside the docker container with a precompiled siesta installe
 This is a simple build based on gfortran and openmpi.
 Use at your own risk! 
 
-This repository is meant to be only as a basic reference install
+This repository is meant to be only as a basic reference install.
+The binary is built using openmpi gfortran and netCDF4.
+The [`sisl`](https://github.com/zerothi/sisl) python toolset is also included. 
+
+
+
+

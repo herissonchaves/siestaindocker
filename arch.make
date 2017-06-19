@@ -26,7 +26,7 @@ KINDS=$(SP_KIND) $(DP_KIND)
 # Add any other sensible compilation flags here
 FFLAGS=-g -O2
 
-FPPFLAGS= -DMPI -DFC_HAVE_FLUSH -DFC_HAVE_ABORT -DCDF -DGRID_DP -DPHI_GRID_SP
+FPPFLAGS= -DMPI -DFC_HAVE_FLUSH -DFC_HAVE_ABORT -DCDF -DGRID_DP -DPHI_GRID_SP -DNCDF -DNCDF_4
 LDFLAGS=
 
 ARFLAGS_EXTRA=
@@ -36,13 +36,15 @@ FCFLAGS_free_f90=
 FPPFLAGS_fixed_F=
 FPPFLAGS_free_F90=
 
-INCFLAGS=-I/usr/include -I. -I/usr/lib/openmpi/include
+INCFLAGS=-I/usr/include -I/usr/local/include -I. -I/usr/lib/openmpi/include
 BLAS_LIBS=-lblas
 LAPACK_LIBS=/usr/lib/lapack/liblapack.a
 BLACS_LIBS=-lblacsF77init-openmpi -lblacsCinit-openmpi -lblacs-openmpi
 SCALAPACK_LIBS=-lscalapack
 
 COMP_LIBS=libsiestaLAPACK.a 
+COMP_LIBS += libncdf.a libfdict.a
+
 
 NETCDF_LIBS=-lnetcdff -lnetcdf
 NETCDF_INTERFACE=libnetcdf_f90.a
