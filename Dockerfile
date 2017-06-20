@@ -41,7 +41,6 @@ WORKDIR /opt
 RUN pip3 install setuptools -U
 RUN pip3 install ipython numpy scipy -U
 
-RUN echo "getting sisl"
 RUN git clone https://github.com/zerothi/sisl.git
 WORKDIR /opt/sisl
 
